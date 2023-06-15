@@ -25,7 +25,7 @@ namespace Geometry_Library_Tests
         public void Triangle_IsRightAngled_True1()
         {
             var triangle = new Triangle(3, 4, 5);
-            bool isRightAngled = triangle.IsRightAngled();
+            bool isRightAngled = triangle.IsRightTriangle();
             Assert.IsTrue(isRightAngled);
         }
 
@@ -33,7 +33,7 @@ namespace Geometry_Library_Tests
         public void Triangle_IsRightAngled_True2()
         {
             var triangle = new Triangle(2, 2, 12);
-            bool isRightAngled = triangle.IsRightAngled();
+            bool isRightAngled = triangle.IsRightTriangle();
             Assert.IsFalse(isRightAngled);
         }
 

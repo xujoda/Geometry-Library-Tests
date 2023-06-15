@@ -69,7 +69,7 @@ namespace Geometry_Library
             return (Math.Sqrt(semiPerimeter * (semiPerimeter - _sideA) * (semiPerimeter - _sideB) * (semiPerimeter - _sideC)));
         }
 
-        public bool IsRightAngled()
+        public bool IsRightTriangle()
         {
             double hypotenuse = Math.Max(_sideA, Math.Max(_sideB, _sideC));
             double sumOfLegSquares = 0;

@@ -3,9 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry Library", "Geometry Library\Geometry Library.csproj", "{FB680CF2-DAD8-4724-BF7D-0525F1D3DFC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geometry Library", "Geometry Library\Geometry Library.csproj", "{FB680CF2-DAD8-4724-BF7D-0525F1D3DFC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry Library Tests", "Geometry Library Tests\Geometry Library Tests.csproj", "{55ED1B97-14E6-45FE-A80F-B26F27B29E58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geometry Library Tests", "Geometry Library Tests\Geometry Library Tests.csproj", "{55ED1B97-14E6-45FE-A80F-B26F27B29E58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry", "Geometry\Geometry.csproj", "{A80AE342-B6AD-4BF0-929E-021ECCFCBCCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{595E5D95-3095-400D-9A58-61608C60B8FF}"
+	ProjectSection(SolutionItems) = preProject
+		SqlQuery_1.sql = SqlQuery_1.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +28,10 @@ Global
 		{55ED1B97-14E6-45FE-A80F-B26F27B29E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55ED1B97-14E6-45FE-A80F-B26F27B29E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55ED1B97-14E6-45FE-A80F-B26F27B29E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A80AE342-B6AD-4BF0-929E-021ECCFCBCCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A80AE342-B6AD-4BF0-929E-021ECCFCBCCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A80AE342-B6AD-4BF0-929E-021ECCFCBCCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A80AE342-B6AD-4BF0-929E-021ECCFCBCCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,9 +1,53 @@
 ﻿
 namespace Geometry_Library
 {
-    public abstract class Shape
+    interface IShape
     {
-        public abstract double GetArea();
+        double GetArea();
+    }
+
+    public class Shape : IShape
+    {
+        private double _sideA;
+        private double _sideB;
+        private double _sideC;
+        private double _sideD;
+        private double _h;
+
+        public Shape(double sideA = 0, double sideB = 0, double sideC = 0, double sideD = 0, double h = 0)
+        {
+            _sideA = sideA;
+            _sideB = sideB;
+            _sideC = sideC;
+            _sideD = sideD;
+            _h = h;            
+        }
+
+        public double GetArea()
+        {// в этих условных операторах я подразумеваю, что пользователь будет по порядку записывать значения :D
+            if (_sideA == _sideC && _sideB == _sideD && _h == 0) 
+                return isRectangular();
+            if ((_sideB == 0 && _h != 0) || (_sideA == _sideB && _sideB == _sideC && _sideC == _sideD && _h != 0))
+                return isRightParallelogram();
+            if (_sideA != _sideB && _h != 0)
+                return isTrapezoid();
+            return 0;
+        }
+
+        private double isRectangular()
+        {
+            return _sideA * _sideB;
+        }
+
+        private double isRightParallelogram()
+        {
+            return _sideA * _h;
+        }
+
+        private double isTrapezoid()
+        {
+            return 0.5 * (_sideA + _sideC) * _h;
+        }
     }
 
     public class Triangle : Shape
@@ -19,7 +63,7 @@ namespace Geometry_Library
             _sideC = sideC;
         }
 
-        public override double GetArea()
+        public new double GetArea()
         {
             double semiPerimeter = (_sideA + _sideB + _sideC) / 2;
             return (Math.Sqrt(semiPerimeter * (semiPerimeter - _sideA) * (semiPerimeter - _sideB) * (semiPerimeter - _sideC)));
@@ -45,7 +89,7 @@ namespace Geometry_Library
             _radius = radius;
         }
 
-        public override double GetArea()
+        public new double GetArea()
         {
             return (Math.PI * _radius * _radius);
         }
